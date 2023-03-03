@@ -1,1 +1,1 @@
-# timedistributed-pytorch
+# TimeDistributed module for Pytorch
