@@ -34,7 +34,6 @@ class TimeDistributed(nn.Module):
         if self.batch_first:
             # BS, Seq_length, * -> Seq_length, BS, *
             x = x.transpose(0, 1)
-        print(x.shape)
         output = torch.stack([self.module(xt) for xt in x], dim=0)
         if self.batch_first:
             # Seq_length, BS, * -> BS, Seq_length, *
